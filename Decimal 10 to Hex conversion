@@ -1,1 +1,48 @@
+#include <iostream>
+using namespace std;
 
+void convert(){
+	int num;
+	int list[30];
+	int top=0;
+	cout<<"Enter decimal 10 number:";
+	cin>>num;
+	while (num>16){
+		list[top]=num%16;
+		num=int(num/16);
+		top+=1;
+	}
+	list[top]=num;
+	for (int i=top;i>-1;i--){
+		if ((list[i]<10)){
+			cout<<list[i];
+		}
+		if (list[i]==10){
+			cout<<"A";
+		}
+		if (list[i]==11){
+			cout<<"B";
+		}
+		if (list[i]==12){
+			cout<<"C";
+		}
+		if (list[i]==13){
+			cout<<"D";
+		}
+		if (list[i]==14){
+			cout<<"E";
+		};
+		if (list[i]==15){
+			cout<<"F";
+		}
+		
+		
+		
+		
+	}
+}
+int main(){
+		convert();
+		return 0;
+}
+		
