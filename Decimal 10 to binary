@@ -1,0 +1,34 @@
+# include <iostream>
+using namespace std;
+int convert(int a ){
+	int list[100];
+	int count=0;
+	double b;
+	while (a>0){
+		b=a%2;
+		if (b>0){
+			list[count]=1;
+			cout<<a<<" / 2 ----->"<<(a/2)<<" rem 1"<<endl;
+		}else{
+			list [count]=0;
+			cout<<a<<" / 2 ----->"<<(a/2)<<" rem 0"<<endl;
+		}
+		a=a/2;
+		count+=1;
+	}
+	count=count-1;
+	while (count>=0){
+		cout<<list[count];
+		count-=1;
+	}
+}
+	
+
+int main(){
+	long int a;
+	cout<<"Enter decimal 10 number to convert:";
+	cin>>a;
+	convert(a);
+	return 0;
+}
+	
